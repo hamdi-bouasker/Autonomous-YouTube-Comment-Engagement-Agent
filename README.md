@@ -526,22 +526,23 @@ CMD ["python", "main.py"]
 ##### docker-compose.yml:
 
 ```
-services:
-  yt-gemini-bot:
-    build: .
-    container_name: yt_telegram_gemini_bot
-    restart: unless-stopped
-    env_file:
-      - .env
-    volumes:
-      # Mount data directory to persist OAuth tokens or database files if needed
-      - ./data:/app/data
-    logging:
-      driver: "json-file"
-      options:
-        max-size: "10m"
-        max-file: "3"
+  services:
+    yt-gemini-bot:
+      build: .
+      container_name: yt_telegram_gemini_bot
+      restart: unless-stopped
+      env_file:
+        - .env
+        volumes:
+        # Mount data directory to persist OAuth tokens or database files if needed
+          - ./data:/app/data
+        logging:
+          driver: "json-file"
+        options:
+          max-size: "10m"
+          max-file: "3"
     ```
+
 
   ### 📱 Telegram Commands & Usage
 
