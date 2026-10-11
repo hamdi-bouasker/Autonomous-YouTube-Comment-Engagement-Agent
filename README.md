@@ -541,22 +541,22 @@ CMD ["python", "main.py"]
         options:
           max-size: "10m"
           max-file: "3"
-    ```
+```
 
 
-  ### 📱 Telegram Commands & Usage
+### 📱 Telegram Commands & Usage
 
-  - Background Polling: The bot automatically scans your configured YouTube video every 15 minutes (SCAN_INTERVAL_SECONDS).
+- Background Polling: The bot automatically scans your configured YouTube video every 15 minutes (SCAN_INTERVAL_SECONDS).
 
-  - Manual Scan (/check): Send /check directly to your Telegram bot at any time to trigger an instant real-time comment scan.
+- Manual Scan (/check): Send /check directly to your Telegram bot at any time to trigger an instant real-time comment scan.
 
-  - Interactive Approvals: Review the incoming cards in Telegram:
+- Interactive Approvals: Review the incoming cards in Telegram:
 
-  - Click ✅ Approve & Post to publish the AI response instantly to YouTube.
+- Click ✅ Approve & Post to publish the AI response instantly to YouTube.
 
-  - Click ❌ Reject to archive and dismiss the comment.
+- Click ❌ Reject to archive and dismiss the comment.
 
- ### 📄 License & Credits
+### 📄 License & Credits
 
-   Developed as an open-source automation utility for creators and engineers. Feel free to fork, modify, and adapt for your     own workflows!
+Developed as an open-source automation utility for creators and engineers. Feel free to fork, modify, and adapt for your     own workflows!
 
