@@ -1,4 +1,4 @@
-# Autonomous-YouTube-Comment-Engagement-Agent
+# Autonomous YouTube Comment Engagement AI Agent
 A production-grade, containerized AI agent that monitors YouTube video comments in real-time, leverages Google Gemini AI to analyze viewer sentiment and draft context-aware responses, and routes drafts to Telegram for a 1-click human-in-the-loop approval workflow before publishing live via the YouTube Data API v3.
 
 ![Intelligent_YouTube_AI_Engagement_Agent.jpg](https://github.com/hamdi-bouasker/Autonomous-YouTube-Comment-Engagement-Agent/blob/master/Intelligent_YouTube_AI_Engagement_Agent.jpg)
