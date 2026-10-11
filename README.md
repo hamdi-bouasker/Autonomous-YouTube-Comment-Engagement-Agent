@@ -46,19 +46,23 @@ Built for seamless 24/7 background execution using Docker and Docker Compose wit
 
 ### Step 1: Clone the Repository & Setup Environment
 
-``` git clone https://github.com/your-username/yt-gemini-bot.git
+```
+git clone https://github.com/your-username/yt-gemini-bot.git
 cd yt-gemini-bot
-mkdir data ```
+mkdir data
+```
 
 ### Step 2: Configure Environment Variables (.env)
 
 Create a .env file in your root directory and fill in your actual keys:
 
-``` TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
+```
+TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
 TELEGRAM_CHAT_ID=your_personal_numeric_chat_id_here
 GEMINI_API_KEY=your_google_gemini_api_key_here
 YOUTUBE_VIDEO_ID=your_target_youtube_video_id_here
-SCAN_INTERVAL_SECONDS=900 ```
+SCAN_INTERVAL_SECONDS=900
+```
 
 #### How to Obtain Your Credentials:
 
