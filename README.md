@@ -492,7 +492,9 @@ if __name__ == "__main__":
 
 Build and spin up your stack instantly using Docker Compose:
 
-`docker compose up -d --build`
+`
+docker compose up -d --build
+`
 
 #### Docker Configuration Files
 
