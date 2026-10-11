@@ -85,11 +85,11 @@ Because automated posting requires write access on behalf of your channel:
 5. Create and run the local OAuth generator script (generate_token.py) in your project root to authorize headlessly:
 
 `import os
-from google_auth_oauthlib.flow import InstalledAppFlow
+ from google_auth_oauthlib.flow import InstalledAppFlow
 
-SCOPES = ["https://www.googleapis.com/auth/youtube.force-ssl"]
+ SCOPES = ["https://www.googleapis.com/auth/youtube.force-ssl"]
 
-def main():
+ def main():
     flow = InstalledAppFlow.from_client_secrets_file("data/client_secret.json", SCOPES)
     creds = flow.run_local_server(port=0)
     
