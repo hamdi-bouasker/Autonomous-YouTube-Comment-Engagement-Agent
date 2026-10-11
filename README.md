@@ -46,19 +46,19 @@ Built for seamless 24/7 background execution using Docker and Docker Compose wit
 
 ### Step 1: Clone the Repository & Setup Environment
 
-`git clone https://github.com/your-username/yt-gemini-bot.git
+``` git clone https://github.com/your-username/yt-gemini-bot.git
 cd yt-gemini-bot
-mkdir data`
+mkdir data ```
 
 ### Step 2: Configure Environment Variables (.env)
 
 Create a .env file in your root directory and fill in your actual keys:
 
-`TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
+``` TELEGRAM_BOT_TOKEN=your_telegram_bot_token_here
 TELEGRAM_CHAT_ID=your_personal_numeric_chat_id_here
 GEMINI_API_KEY=your_google_gemini_api_key_here
 YOUTUBE_VIDEO_ID=your_target_youtube_video_id_here
-SCAN_INTERVAL_SECONDS=900`
+SCAN_INTERVAL_SECONDS=900 ```
 
 #### How to Obtain Your Credentials:
 
@@ -84,7 +84,7 @@ Because automated posting requires write access on behalf of your channel:
 
 5. Create and run the local OAuth generator script (generate_token.py) in your project root to authorize headlessly:
 
-` 
+``` 
   import os
   from google_auth_oauthlib.flow import InstalledAppFlow
 
@@ -101,7 +101,7 @@ Because automated posting requires write access on behalf of your channel:
 
 if __name__ == "__main__":
     main() 
-`
+```
 
 #### Run it locally:
 
@@ -112,19 +112,22 @@ Sign in with your channel account in the pop-up browser window. Your token.json 
 
 ### Step 4: Python Dependencies (requirements.txt)
 
-`google-genai==1.3.0
+```
+google-genai==1.3.0
 google-api-python-client==2.160.0
 google-auth-oauthlib==1.2.1
 youtube-transcript-api==0.6.3
 python-telegram-bot==21.10
 pydantic==2.10.6
-httpx==0.28.1`
+httpx==0.28.1
+```
 
 ### Step 5: Core Application Script (main.py)
 
 Place the production-ready script into your root directory as main.py (refer to the full implementation provided in the guide earlier).
 
-`import os
+```
+import os
 import time
 import json
 import logging
@@ -478,7 +481,8 @@ def main():
     app.run_polling()
 
 if __name__ == "__main__":
-    main()`
+    main()    
+```
 
 ### 🐳 Containerization & Deployment
 
@@ -490,7 +494,8 @@ Build and spin up your stack instantly using Docker Compose:
 
 ##### Dockerfile:
 
-`FROM python:3.11-slim
+```
+FROM python:3.11-slim
 
 # Prevent Python from writing .pyc files and enable unbuffered output
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -509,11 +514,13 @@ COPY . .
 RUN useradd -m appuser && chown -R appuser:appuser /app
 USER appuser
 
-CMD ["python", "main.py"]`
+CMD ["python", "main.py"]
+```
 
 ##### docker-compose.yml:
 
-`services:
+```
+services:
   yt-gemini-bot:
     build: .
     container_name: yt_telegram_gemini_bot
@@ -527,7 +534,8 @@ CMD ["python", "main.py"]`
       driver: "json-file"
       options:
         max-size: "10m"
-        max-file: "3"`
+        max-file: "3"
+    ```
 
   ### 📱 Telegram Commands & Usage
 
